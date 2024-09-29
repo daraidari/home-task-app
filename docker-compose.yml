@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+    keenious:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+            - VITE_OPEN_AI_URL=https://api.openai.com/v1/chat/completions
+            - VITE_API_KEY=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
+        ports:
+            - "8000:80"
